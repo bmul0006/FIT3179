@@ -1,0 +1,145 @@
+,Country,Item,latitude,longitude
+0,Australia,Apples,-25.274398,133.775136
+1,Cook Islands,Avocados,-21.236736,-159.777671
+2,Fiji,Bananas,-16.578193,179.414413
+3,French Polynesia,Bananas,-17.679742,-149.406843
+4,Kiribati,Bananas,-3.370417,-168.734039
+5,Nauru,Coconuts,-0.522778,166.931503
+6,New Caledonia,Bananas,-20.904305,165.618042
+7,New Zealand,Apples,-40.900557,174.885971
+8,Niue,Bananas,-19.054445,-169.867233
+9,Papua New Guinea,Bananas,-6.314993,143.95555
+10,Samoa,Avocados,-13.759029,-172.104629
+11,Solomon Islands,Bananas,-9.64571,160.156194
+12,Tokelau,Bananas,-8.967363,-171.855881
+13,Tonga,Bananas,-21.178986,-175.198242
+14,Tuvalu,Bananas,-7.109535,177.64933
+15,Vanuatu,Bananas,-15.376706,166.959158
+16,Afghanistan,Apples,33.93911,67.709953
+17,Bahrain,Bananas,25.930414,50.637772
+18,Bangladesh,Areca nuts,23.684994,90.356331
+19,Bhutan,Apples,27.514162,90.433601
+20,Cambodia,Bananas,12.565679,104.990963
+21,Cyprus,"Almonds, with shell",35.126413,33.429859
+22,India,"Anise, badian, fennel, coriander",20.593684,78.96288
+23,Indonesia,Areca nuts,-0.789275,113.921327
+24,Iraq,"Almonds, with shell",33.223191,43.679291
+25,Israel,"Almonds, with shell",31.046051,34.851612
+26,Japan,Apples,36.204824,138.252924
+27,Jordan,"Almonds, with shell",30.585164,36.238414
+28,Kuwait,Dates,29.31166,47.481766
+29,Lebanon,"Almonds, with shell",33.854721,35.862285
+30,Malaysia,Areca nuts,4.210484,101.975766
+31,Maldives,Areca nuts,3.202778,73.22068
+32,Mongolia,Barley,46.862496,103.846656
+33,Nepal,Barley,28.394857,84.124008
+34,Oman,Bananas,21.512583,55.923255
+35,Pakistan,"Almonds, with shell",30.375321,69.345116
+36,Philippines,Agave fibres nes,12.879721,121.774017
+37,Saudi Arabia,Barley,23.885942,45.079162
+38,Singapore,Cassava,1.352083,103.819836
+39,Sri Lanka,"Beans, dry",7.873054,80.771797
+40,Thailand,Bananas,15.870032,100.992541
+41,Timor-Leste,Bananas,-8.874217,125.727539
+42,Turkey,"Almonds, with shell",38.963745,35.243322
+43,United Arab Emirates,"Almonds, with shell",23.424076,53.847818
+44,Yemen,Bananas,15.552727,48.516388
+45,Algeria,"Almonds, with shell",28.033886,1.659626
+46,Angola,Bananas,-11.202692,17.873887
+47,Benin,Bananas,9.30769,2.315834
+48,Botswana,"Fruit, fresh nes",-22.328474,24.684866
+49,Burkina Faso,Bambara beans,12.238333,-1.561593
+50,Burundi,Bananas,-3.373056,29.918886
+51,Cameroon,Avocados,7.369722,12.354722
+52,Central African Republic,Avocados,6.611111,20.939444
+53,Chad,"Beans, dry",15.454166,18.732207
+54,Comoros,Bananas,-11.875001,43.872219
+55,Côte d'Ivoire,Avocados,7.539989,-5.54708
+56,Djibouti,Carrots and turnips,11.825138,42.590275
+57,Egypt,"Anise, badian, fennel, coriander",26.820553,30.802498
+58,Equatorial Guinea,Bananas,1.650801,10.267895
+59,Gabon,Bananas,-0.803689,11.609444
+60,Gambia,Cassava,13.443182,-15.310139
+61,Ghana,Avocados,7.946527,-1.023194
+62,Guinea,Bananas,9.945587,-9.696645
+63,Guinea-Bissau,"Cashew nuts, with shell",11.803749,-15.180413
+64,Kenya,Apricots,-0.023559,37.906193
+65,Lesotho,Barley,-29.609988,28.233608
+66,Liberia,Bananas,6.428055,-9.429499
+67,Libya,"Almonds, with shell",26.3351,17.228331
+68,Madagascar,Apples,-18.766947,46.869107
+69,Malawi,Bananas,-13.254308,34.301525
+70,Mali,Bambara beans,17.570692,-3.996166
+71,Mauritania,"Cow peas, dry",21.00789,-10.940835
+72,Mauritius,Bananas,-20.348404,57.552152
+73,Morocco,"Almonds, with shell",31.791702,-7.09262
+74,Mozambique,Bananas,-18.665695,35.529562
+75,Namibia,"Fruit, fresh nes",-22.95764,18.49041
+76,Niger,Cassava,17.607789,8.081666
+77,Nigeria,Carrots and turnips,9.081999,8.675277
+78,Rwanda,"Beans, dry",-1.940278,29.873888
+79,Senegal,Bananas,14.497401,-14.452362
+80,Seychelles,Avocados,-4.679574,55.491977
+81,Sierra Leone,"Broad beans, horse beans, dry",8.460555,-11.779889
+82,Somalia,Bananas,5.152149,46.199616
+83,South Africa,Apples,-30.559482,22.937506
+84,Togo,Bananas,8.619543,0.824782
+85,Tunisia,"Almonds, with shell",33.886917,9.537499
+86,Uganda,Bananas,1.373333,32.290275
+87,Zambia,Bananas,-13.133897,27.849332
+88,Zimbabwe,Apples,-19.015438,29.154857
+89,Albania,Apples,41.153332,20.168331
+90,Austria,Apples,47.516231,14.550072
+91,Bulgaria,"Almonds, with shell",42.733883,25.48583
+92,Denmark,Apples,56.26392,9.501785
+93,Faroe Islands,Potatoes,61.892635,-6.911806
+94,Finland,Apples,61.92411,25.748151
+95,France,"Almonds, with shell",46.227638,2.213749
+96,Germany,Apples,51.165691,10.451526
+97,Greece,"Almonds, with shell",39.074208,21.824312
+98,Hungary,"Almonds, with shell",47.162494,19.503304
+99,Iceland,Cabbages and other brassicas,64.963051,-19.020835
+100,Ireland,Apples,53.41291,-8.24389
+101,Italy,"Almonds, with shell",41.87194,12.56738
+102,Malta,Apples,35.937496,14.375416
+103,Netherlands,Apples,52.132633,5.291266
+104,Norway,Apples,60.472024,8.468946
+105,Poland,Apples,51.919438,19.145136
+106,Portugal,"Almonds, with shell",39.399872,-8.224454
+107,Romania,Apples,45.943161,24.96676
+108,Spain,"Almonds, with shell",40.463667,-3.74922
+109,Sweden,Apples,60.128161,18.643501
+110,Switzerland,Apples,46.818188,8.227512
+111,Antigua and Barbuda,"Beans, green",17.060816,-61.796428
+112,Argentina,"Almonds, with shell",-38.416097,-63.616672
+113,Bahamas,Bananas,25.03428,-77.39628
+114,Barbados,Avocados,13.193887,-59.543198
+115,Belize,Bananas,17.189877,-88.49765
+116,Brazil,Apples,-14.235004,-51.92528
+117,Canada,Apples,56.130366,-106.346771
+118,Chile,Apples,-35.675147,-71.542969
+119,Colombia,Agave fibres nes,4.570868,-74.297333
+120,Costa Rica,Avocados,9.748917,-83.753428
+121,Cuba,Agave fibres nes,21.521757,-77.781167
+122,Dominica,Avocados,15.414999,-61.370976
+123,Dominican Republic,Avocados,18.735693,-70.162651
+124,Ecuador,Apples,-1.831239,-78.183406
+125,El Salvador,Agave fibres nes,13.794185,-88.89653
+126,Grenada,Apples,12.262776,-61.604171
+127,Guatemala,Agave fibres nes,15.783471,-90.230759
+128,Guyana,Avocados,4.860416,-58.93018
+129,Haiti,Avocados,18.971187,-72.285215
+130,Honduras,Avocados,15.199999,-86.241905
+131,Jamaica,Avocados,18.109581,-77.297508
+132,Mexico,"Anise, badian, fennel, coriander",23.634501,-102.552784
+133,Nicaragua,Agave fibres nes,12.865416,-85.207229
+134,Panama,Avocados,8.537981,-80.782127
+135,Paraguay,Apples,-23.442503,-58.443832
+136,Peru,Apples,-9.189967,-75.015152
+137,Puerto Rico,Avocados,18.220833,-66.590149
+138,Saint Kitts and Nevis,Coconuts,17.357822,-62.782998
+139,Saint Lucia,Avocados,13.909444,-60.978893
+140,Saint Vincent and the Grenadines,Apples,12.984305,-61.287228
+141,Suriname,Bananas,3.919305,-56.027783
+142,Trinidad and Tobago,Avocados,10.691803,-61.222503
+143,Uruguay,Apples,-32.522779,-55.765835
