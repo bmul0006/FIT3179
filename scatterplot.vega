@@ -1,0 +1,178 @@
+{
+    "$schema":"https://vega.github.io/schema/vega-lite/v5.json",
+    "width":500,
+    "height":400,
+    "title":"Crop Yield vs Harvest Area",
+    "data":{
+       "url":"https://raw.githubusercontent.com/bmul0006/FIT3179/main/produce_land.csv"
+    },
+    "params":[
+       {
+          "name":"Year_slider",
+          "value":2019,
+          "bind":{
+             "input":"range",
+             "min":2001,
+             "max":2019,
+             "step":1,
+             "name":"Year: "
+          }
+       }
+    ],
+    "transform":[
+       {
+          "filter":"datum.Year == Year_slider"
+       },
+       {
+          "calculate":"log(datum['Area harvested'])",
+          "as":"log_area"
+       }
+    ],
+    "encoding":{
+       "x":{
+          "field":"Area harvested",
+          "type":"quantitative",
+          "axis":{
+             "tickCount":5
+          },
+          "scale":{
+             "type":"log",
+             "domain":[
+                100,
+                1000000000
+             ]
+          },
+          "title":"Area Harvested"
+       },
+       "y":{
+          "field":"Yield",
+          "type":"quantitative",
+          "axis":{
+             "tickCount":3
+          },
+          "scale":{
+             "type":"log",
+             "domain":[
+                100000,
+                100000000
+             ]
+          },
+          "title":"Yield"
+       }
+    },
+    "layer":[
+       {
+          "mark":"circle",
+          "encoding":{
+             "size":{
+                "field":"Land",
+                "type":"quantitative",
+                "scale":{
+                   "type":"threshold",
+                   "domain":[
+                      100000,
+                      200000,
+                      400000,
+                      800000
+                   ],
+                   "range":[
+                      40,
+                      100,
+                      200,
+                      500,
+                      1000
+                   ]
+                },
+                "legend":{
+                   "format":".1s",
+                   "title":"Arable Land"
+                }
+             },
+             "color" : {
+               "field" : "Continent" ,
+               "type" : "nominal"
+            },
+             "tooltip":[
+                {
+                   "field":"Country",
+                   "type":"nominal"
+                },
+                {
+                  "field":"Continent",
+                  "type":"nominal"
+                },
+                {
+                   "field":"Land",
+                   "type":"nominal",
+                   "format":",",
+                   "title":"Arable Land (km2)"
+                },
+                {
+                   "field":"Area harvested",
+                   "type":"quantitative",
+                   "format":",",
+                   "title":"Area harvested (km2)"
+                },
+                {
+                   "field":"Yield",
+                   "type":"quantitative",
+                   "format":","
+                }
+             ]
+          }
+       },
+       {
+          "mark":{
+             "type":"text",
+             "align":"right",
+             "baseline":"middle",
+             "dx":-12,
+             "fontSize":11.5,
+             "fontStyle":"italic"
+          },
+          "encoding":{
+             "text":{
+                "field":"Country",
+                "type":"nominal"
+             },
+             "color":{
+                "value":"black"
+             },
+             "opacity":{
+                "condition":{
+                   "test":"datum['Country'] == 'United States of America' || datum['Country'] =='Singapore' || datum['Country'] == 'Australia' || datum['Country'] == 'New Zealand' || datum['Country'] == 'India' || datum['Country'] == 'Malaysia' || datum['Country'] == 'Iceland' || datum['Country'] == 'Saudi Arabia'",
+                   "value":1
+                },
+                "value":0
+             },
+             "tooltip":[
+                {
+                   "field":"Country",
+                   "type":"nominal"
+                },
+                {
+                  "field":"Continent",
+                  "type":"nominal"
+                },
+                {
+                   "field":"Land",
+                   "type":"nominal",
+                   "format":",",
+                   "title":"Arable Land (km2)"
+                },
+                {
+                   "field":"Area harvested",
+                   "type":"quantitative",
+                   "format":",",
+                   "title":"Area harvested (km2)"
+                },
+                {
+                   "field":"Yield",
+                   "type":"quantitative",
+                   "format":","
+                }
+             ]
+          }
+       }
+    ]
+ }
