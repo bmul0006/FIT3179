@@ -42,21 +42,22 @@
               "url": "https://raw.githubusercontent.com/bmul0006/FIT3179/main/produce_land.csv"
             },
             "key": "Country",
-            "fields": ["Produce_hectare"]
+            "fields": ["Production"]
           }
         },
-        {"calculate": "datum.Produce_hectare", "as": "Production per hectare"}
+        {"calculate": "datum.Production", "as": "Production per km2"}
       ],
       "mark": {"type": "geoshape", "stroke":"white"},
+      "params": [{"name": "countrySelection", "select": {"type": "point"}}],
       "encoding": {
         "color": {
-          "field": "Production per hectare",
+          "field": "Production per km2",
           "type": "quantitative",
           "scale": {"scheme": "browns", "type": "log"}
         },
         "tooltip": [
           {"field": "properties.NAME", "type": "nominal", "title": "Country"},
-          {"field": "Produce_hectare", "type": "quantitative", "title": "Production/hectare"}
+          {"field": "Production", "type": "quantitative", "title": "Production/km2"}
         ]
       }
     }
