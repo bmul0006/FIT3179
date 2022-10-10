@@ -69,7 +69,8 @@
      "x":{
         "field":"Amount",
         "type":"quantitative",
-        "title":"Yield"
+        "title":"Yield",
+        "axis":{"format":".1s"}
      },
      "y":{
         "field":"Item",
@@ -96,7 +97,8 @@
         "encoding":{
            "text":{
               "field":"Amount",
-              "type":"quantitative"
+              "type":"quantitative",
+              "format":","
            }
         }
      }
