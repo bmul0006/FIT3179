@@ -91,7 +91,9 @@
              },
              "color" : {
                "field" : "Continent" ,
-               "type" : "nominal"
+               "type" : "nominal",
+               "scale":{"scheme": "category20"}
+            
             },
              "tooltip":[
                 {
@@ -120,8 +122,8 @@
                    "format":","
                 }
              ]
-          }
-       },
+            }
+          },
        {
           "mark":{
              "type":"text",

@@ -19,7 +19,7 @@
         "axis": null,
         "stack": "center"
       },
-      "color": {"field":"Country", "scale":{"scheme": "category20b"}},
+      "color": {"field":"Country", "scale":{"scheme": "category20"}},
       "tooltip":[
         {
            "field":"Country",

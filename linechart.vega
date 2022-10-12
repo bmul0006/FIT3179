@@ -21,7 +21,7 @@
         "type": "quantitative",
         "axis":{"format":".2s"},
         "title":"Production"},
-      "color": {"field": "Item", "type": "nominal","legend":{"title":"Crops"}
+      "color": {"field": "Item", "type": "nominal","legend":{"title":"Crops"},"scale":{"scheme": "category20"}
     },
     "tooltip":[
         {
