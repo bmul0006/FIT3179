@@ -11,16 +11,37 @@
     {
         "filter":"datum.Item == 'Maize' || datum.Item == 'Rice, paddy'|| datum.Item == 'Vegetables Primary' || datum.Item == 'Sugar cane' || datum.Item == 'Vegetables Primary' || datum.Item == 'Cereals, Total'|| datum.Item == 'Oilcrops' || datum.Item == 'Sugar Crops Primary' || datum.Item == 'Wheat' || datum.Item == 'Potatoes' || datum.Item == 'Fruit Primary'"
     }],
-    "mark": "line",
+    "mark": {"type":"line","point": true},
     "encoding": {
       "x": {"field": "Year", "type": "temporal",
       "axis":{"tickCount":8}},
       "y": {
-        "aggregate": "sum",
+        "aggregate":"sum",
         "field": "Amount",
         "type": "quantitative",
         "axis":{"format":".2s"},
         "title":"Production"},
-      "color": {"field": "Item", "type": "nominal"}
+      "color": {"field": "Item", "type": "nominal","legend":{"title":"Crops"}
+    },
+    "tooltip":[
+        {
+           "field":"Item",
+           "type":"nominal",
+           "title":"Crop"
+        },
+        {
+          "field":"Year",
+          "type":"temporal",
+          "timeUnit":"year",
+          "title":"Year"
+        },
+        {
+            "aggregate":"sum",
+           "field":"Amount",
+           "type":"quantitative",
+           "format":",.3s",
+           "title":"Production"
+        }
+     ]
     }
   }
