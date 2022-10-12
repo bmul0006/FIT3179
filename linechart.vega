@@ -1,0 +1,26 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Global Crop Production over Time",
+    "width":500,
+    "height":400,
+    "data": {"url": "https://raw.githubusercontent.com/bmul0006/FIT3179/main/crop_productions.csv"},
+    "transform": [
+        {
+            "filter":"datum.Type == 'Production'"
+        },
+    {
+        "filter":"datum.Item == 'Maize' || datum.Item == 'Rice, paddy'|| datum.Item == 'Vegetables Primary' || datum.Item == 'Sugar cane' || datum.Item == 'Vegetables Primary' || datum.Item == 'Cereals, Total'|| datum.Item == 'Oilcrops' || datum.Item == 'Sugar Crops Primary' || datum.Item == 'Wheat' || datum.Item == 'Potatoes' || datum.Item == 'Fruit Primary'"
+    }],
+    "mark": "line",
+    "encoding": {
+      "x": {"field": "Year", "type": "temporal",
+      "axis":{"tickCount":8}},
+      "y": {
+        "aggregate": "sum",
+        "field": "Amount",
+        "type": "quantitative",
+        "axis":{"format":".2s"},
+        "title":"Production"},
+      "color": {"field": "Item", "type": "nominal"}
+    }
+  }

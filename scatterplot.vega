@@ -2,27 +2,28 @@
     "$schema":"https://vega.github.io/schema/vega-lite/v5.json",
     "width":500,
     "height":400,
-    "title":"Crop Yield vs Harvest Area",
+    "title":"Crop Yield vs Harvest Area in 2019",
     "data":{
        "url":"https://raw.githubusercontent.com/bmul0006/FIT3179/main/produce_land.csv"
     },
     "params":[
-       {
-          "name":"Year_slider",
-          "value":2019,
-          "bind":{
-             "input":"range",
-             "min":2001,
-             "max":2019,
-             "step":1,
-             "name":"Year: "
-          }
-       }
-    ],
+      {
+         "name":"Continent_selection",
+         "bind":{
+            "input":"select",
+            "options":[null,"Africa","Asia","Europe","North America","Oceania","South America"],
+            "labels":["Show All","Africa","Asia","Europe","North America","Oceania","South America"],
+            "name":"Continent Selection: "
+         }
+      }
+   ],
     "transform":[
        {
-          "filter":"datum.Year == Year_slider"
+          "filter":"datum.Year == 2019"
        },
+       {
+         "filter":"Continent_selection == null || datum.Continent == Continent_selection"
+      },
        {
           "calculate":"log(datum['Area harvested'])",
           "as":"log_area"

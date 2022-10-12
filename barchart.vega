@@ -1,6 +1,6 @@
 {
   "$schema":"https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Top 5 Crops for each country",
+  "title": "Top 5 Crops for each country in 2019",
   "data":{
      "url":"https://raw.githubusercontent.com/bmul0006/FIT3179/main/crop_productions.csv"
   },
@@ -33,7 +33,7 @@
            "Solomon Islands","Somalia","South Africa","Spain","Sri Lanka","Suriname","Sweden","Switzerland","Syrian Arab Republic","Thailand","Timor-Leste","Togo","Tonga",
            "Trinidad and Tobago","Tunisia","Turkey","Uganda","United Arab Emirates","United Kingdom","Tanzania","United States of America","Uruguay","Vanuatu","Venezuela","Vietnam",
            "Yemen","Zambia","Zimbabwe"],
-           "name":"Country Selection: "
+           "name":"Country: "
         }
      }
   ],
