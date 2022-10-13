@@ -1,5 +1,7 @@
 .sides { background-color: rgb(255, 244, 218); } 
+
 .banner { background-color: rgb(172, 209, 175); }
+
 h1 {
     color: white;
     font-weight: bold;
@@ -8,4 +10,15 @@ h1 {
 h3 {
     color: white;
     font-size: 25px;
+}
+
+.vis-container {
+    width: 100%;
+}
+
+.page {
+    width: 850px;
+    background-color: white;
+    margin: auto;
+    
 }
