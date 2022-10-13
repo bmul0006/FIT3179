@@ -1,7 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 300, "height": 200,
-    "title":"Crop Production from 2001 - 2019",
+    "width": "container",
+    "height": "container",
+    "title":"Crop Production Over Time",
     "data": {
         "url": "https://raw.githubusercontent.com/bmul0006/FIT3179/main/produce_land.csv"},
     "transform": [{
