@@ -1,1 +1,9 @@
-.sides { background-color: rgb(252, 228, 177); } 
+.sides { background-color: rgb(255, 240, 206); } 
+.banner { background-color: rgb(9, 8, 104); }
+h1 {
+    color: white;
+    font-weight: bold;
+}
+h3 {
+    color: white;
+}

@@ -1,6 +1,6 @@
 {
   "$schema":"https://vega.github.io/schema/vega-lite/v5.json",
-  "title":"Crop Production per Farmable Land(hectares) in 2019",
+  "title":"Crop Production per Farmable Land(km2) in 2019",
   "width": "container",
   "height": "container",
   "data":{
