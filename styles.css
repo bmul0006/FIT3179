@@ -1,9 +1,11 @@
-.sides { background-color: rgb(255, 240, 206); } 
-.banner { background-color: rgb(69, 173, 0); }
+.sides { background-color: rgb(255, 244, 218); } 
+.banner { background-color: rgb(172, 209, 175); }
 h1 {
     color: white;
     font-weight: bold;
+    font-size: 50px;
 }
 h3 {
     color: white;
+    font-size: 25px;
 }
