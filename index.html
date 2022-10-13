@@ -7,24 +7,26 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/pure-min.css"
     integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH"
     crossorigin="anonymous">
-
+    <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
 
     <script src="vega_lite_vis.js"></script>
-    <title>Crop Production Around the Globe</title>
+
 </head>
 <body>
-    <h1>Week 9 Homework</h1>
-    <h2>Brandon Alexander</h2>
+    <h1 style="text-align:center;">Crop Production Around the Globe</h1>
+    <h2 style="text-align:center;">Brandon Alexander</h2>
     <div class="pure-g">
-        <center>
-            <div class="pure-u-1" id="choropleth_map"></div>
-        </center>
+        <div class="pure-u-1-6 sides"></div>
+        <div class="pure-u-2-3"></div>
+        <div class="pure-u-1-6 sides"></div>
     </div>
     <div class="pure-g">
+        <div class="pure-u-2-5" id="choropleth_map"></div>
         <div class="pure-u-3-5" id="scatterplot"></div>
+        
     </div>
     <div id="barchart"></div>
     <div id="streamgraph"></div>
