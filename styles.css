@@ -34,3 +34,7 @@ h3 {
 .description-right {
     padding-left: 20px;
 }
+
+.vis-padding {
+    padding:25%;
+}
