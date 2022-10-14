@@ -30,3 +30,7 @@ h3 {
 .description-left {
     padding-right: 20px;
 }
+
+.description-right {
+    padding-left: 20px;
+}
