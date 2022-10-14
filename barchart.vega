@@ -2,7 +2,6 @@
   "$schema":"https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Top 5 Crops for each country in 2019",
   "width": "container",
-  "height": "container",
   "data":{
      "url":"https://raw.githubusercontent.com/bmul0006/FIT3179/main/crop_productions.csv"
   },
