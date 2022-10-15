@@ -57,11 +57,12 @@ h3 {
 }
 
 @font-face {
-    font-family: Montserrat;
+    font-family: 'Montserrat';
     src: url(https://fonts.googleapis.com/css?family=Montserrat);
 }
 
-#Country_selection {
-    text-align: center;
-    color: red;
+input[name="Country_selection"] {
+    background: red;
+    font-family:'Monserrat';
+
   }
