@@ -1,41 +1,45 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": "container",
-    "title":"Crop Production Over Time",
-    "data": {
-        "url": "https://raw.githubusercontent.com/bmul0006/FIT3179/main/produce_land.csv"},
-    "transform": [{
-        "filter":"datum['Country'] == 'United States of America' || datum['Country'] =='Singapore' || datum['Country'] == 'Australia' || datum['Country'] == 'Japan' || datum['Country'] == 'India' || datum['Country'] == 'Malaysia' || datum['Country'] == 'Mexico' || datum['Country'] == 'Germany' || datum['Country'] == 'Brazil' || datum['Country'] == 'Nigeria' || datum['Country'] == 'Argentina' || datum['Country'] == 'South Africa' || datum['Country'] == 'France'"
-    }],
-    "mark": "area",
-    "encoding": {
-      "x": {
-        "timeUnit": "year", "field": "Year",
-        "axis": {"domain": false, "format": "%Y", "tickSize": 0},
-        "title":"Year"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "title":"Country Crop Production Over Time",
+  "config": {"font": "Montserrat"},
+  "data": {
+      "url": "https://raw.githubusercontent.com/bmul0006/FIT3179/main/produce_land.csv"},
+  "transform": [{
+      "filter":"datum['Country'] == 'United States of America' || datum['Country'] == 'Australia' || datum['Country'] == 'India' || datum['Country'] == 'Malaysia' || datum['Country'] == 'Mexico' || datum['Country'] == 'Brazil' || datum['Country'] == 'Nigeria' || datum['Country'] == 'Argentina' || datum['Country'] == 'France'"
+  }],
+  "mark": "area",
+  "encoding": {
+    "x": {
+      "timeUnit": "year", "field": "Year",
+      "axis": {"domain": false, "format": "%Y"},
+      "title":"Year"
+    },
+    "y": {
+      "aggregate": "sum",
+      "field": "Production",
+      "axis":{
+        "format":".1s"
       },
-      "y": {
-        "aggregate": "sum", "field": "Production",
-        "axis": null,
-        "stack": "center"
+      "title":"Crop Production (billion)"
+    },
+    "color": {"field":"Country"},
+    "tooltip":[
+      {
+         "field":"Country",
+         "type":"nominal"
       },
-      "color": {"field":"Country", "scale":{"scheme": "category20"}},
-      "tooltip":[
-        {
-           "field":"Country",
-           "type":"nominal"
-        },
-        {
-            "timeUnit": "year",
-            "field":"Year",
-            "type":"nominal",
-            "title":"Year"
-         },
-        {
-           "field":"Production",
-           "type":"quantitative",
-           "format":","
-        }
-     ]
-    }
+      {
+          "timeUnit": "year",
+          "field":"Year",
+          "type":"nominal",
+          "title":"Year"
+       },
+      {
+         "field":"Production",
+         "type":"quantitative",
+         "format":","
+      }
+   ]
   }
+}

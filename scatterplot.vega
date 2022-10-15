@@ -2,6 +2,7 @@
     "$schema":"https://vega.github.io/schema/vega-lite/v5.json",
     "width": "container",
     "title":"Crop Yield vs Harvest Area in 2019",
+    "config": {"font": "Montserrat"},
     "data":{
        "url":"https://raw.githubusercontent.com/bmul0006/FIT3179/main/produce_land.csv"
     },
