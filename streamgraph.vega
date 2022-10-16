@@ -7,7 +7,7 @@
   "data": {
       "url": "https://raw.githubusercontent.com/bmul0006/FIT3179/main/produce_land.csv"},
   "transform": [{
-      "filter":"datum['Country'] == 'United States of America' || datum['Country'] == 'Australia' || datum['Country'] == 'India' || datum['Country'] == 'Malaysia' || datum['Country'] == 'Mexico' || datum['Country'] == 'Brazil' || datum['Country'] == 'Nigeria' || datum['Country'] == 'Argentina' || datum['Country'] == 'France'"
+      "filter":"datum['Country'] == 'United States of America' || datum['Country'] == 'Australia' || datum['Country'] == 'India' || datum['Country'] == 'Malaysia' || datum['Country'] == 'Mexico' || datum['Country'] == 'Brazil' || datum['Country'] == 'Nigeria' || datum['Country'] == 'China' || datum['Country'] == 'France'"
   }],
   "mark": "area",
   "encoding": {
