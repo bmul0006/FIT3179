@@ -84,14 +84,6 @@
            "type":"geoshape",
            "stroke":"white"
         },
-        "params":[
-           {
-              "name":"countrySelection",
-              "select":{
-                 "type":"point"
-              }
-           }
-        ],
         "encoding":{
            "color":{
               "field":"Production per km2",
@@ -99,7 +91,8 @@
               "scale":{
                  "scheme":"browns",
                  "type":"log"
-              }
+              },
+              "title":"Production per km2 (log scale)"
            },
            "tooltip":[
               {

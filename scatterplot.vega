@@ -31,7 +31,7 @@
     ],
     "encoding":{
        "x":{
-          "field":"Area harvested",
+          "field":"Area harvested (log scale)",
           "type":"quantitative",
           "axis":{
              "tickCount":5
@@ -43,7 +43,7 @@
                 1000000000
              ]
           },
-          "title":"Area Harvested"
+          "title":"Area Harvested (log scale)"
        },
        "y":{
           "field":"Yield",
