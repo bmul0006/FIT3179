@@ -14,7 +14,7 @@
             "input":"select",
             "options":[null,"Africa","Asia","Europe","North America","Oceania","South America"],
             "labels":["Show All","Africa","Asia","Europe","North America","Oceania","South America"],
-            "name":"Continent Selection: "
+            "name":"Continent: "
          }
       }
    ],
@@ -142,38 +142,11 @@
              },
              "opacity":{
                 "condition":{
-                   "test":"datum['Country'] == 'United States of America' || datum['Country'] =='Singapore' || datum['Country'] == 'Australia' || datum['Country'] == 'New Zealand' || datum['Country'] == 'India' || datum['Country'] == 'Malaysia' || datum['Country'] == 'Iceland' || datum['Country'] == 'Saudi Arabia'",
+                   "test":"datum['Country'] == 'United States of America' || datum['Country'] =='Singapore' || datum['Country'] == 'Australia' || datum['Country'] == 'New Zealand' || datum['Country'] == 'India' || datum['Country'] == 'Yemen' || datum['Country'] == 'Iceland' || datum['Country'] == 'Saudi Arabia'",
                    "value":1
                 },
                 "value":0
-             },
-             "tooltip":[
-                {
-                   "field":"Country",
-                   "type":"nominal"
-                },
-                {
-                  "field":"Continent",
-                  "type":"nominal"
-                },
-                {
-                   "field":"Land",
-                   "type":"nominal",
-                   "format":",",
-                   "title":"Arable Land (km2)"
-                },
-                {
-                   "field":"Area harvested",
-                   "type":"quantitative",
-                   "format":",",
-                   "title":"Area harvested (km2)"
-                },
-                {
-                   "field":"Yield",
-                   "type":"quantitative",
-                   "format":","
-                }
-             ]
+             }
           }
        }
     ]
