@@ -27,6 +27,12 @@ h3 {
     margin: auto;   
 }
 
+.textbox {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 .description-left {
     padding-right: 30px;
 }

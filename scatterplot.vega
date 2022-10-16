@@ -92,9 +92,7 @@
              },
              "color" : {
                "field" : "Continent" ,
-               "type" : "nominal",
-               "scale":{"scheme": "category20"}
-            
+               "type" : "nominal"
             },
              "tooltip":[
                 {
