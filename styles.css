@@ -62,6 +62,10 @@ h3 {
     margin-top: 30px;
 }
 
+.marge-bottom{
+    margin-bottom: 50px;
+}
+
 @font-face {
     font-family: 'Montserrat';
     src: url(https://fonts.googleapis.com/css?family=Montserrat);
