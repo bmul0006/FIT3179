@@ -1,8 +1,10 @@
 {
   "$schema":"https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Top 5 Crops for each country in 2019",
-  "width": "container",
-  "height": "container",
+  "height": 300,
+  "autosize": {
+   "type": "fit",
+   "contains": "padding"},
   "config": {"font": "Montserrat",
             "axisY": {"titleAngle": 0, "titleX": -17, "titleY": -3}},
   "data":{
@@ -13,7 +15,7 @@
         "name":"Country_selection",
         "bind":{
            "input":"select",
-           "options":["Afghanistan","Albania","Algeria","Angola","Antigua and Barbuda","Argentina","Australia","Austria","Bahamas","Bahrain","Bangladesh","Barbados","Belize",
+           "options":[null,"Afghanistan","Albania","Algeria","Angola","Antigua and Barbuda","Argentina","Australia","Austria","Bahamas","Bahrain","Bangladesh","Barbados","Belize",
            "Benin","Bhutan","Bolivia","Botswana","Brazil","Brunei Darussalam","Bulgaria","Burkina Faso","Burundi","Cabo Verde","Cambodia","Cameroon","Canada","Central African Republic",
            "Chad","Chile","Hong Kong","China","Colombia","Comoros","Republic of the Congo","Costa Rica","Cuba","Cyprus","Côte d'Ivoire","North Korea","Democratic Republic of the Congo",
            "Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eswatini","Faroe Islands","Fiji","Finland","France","French Polynesia",
@@ -25,7 +27,7 @@
            "Solomon Islands","Somalia","South Africa","Spain","Sri Lanka","Suriname","Sweden","Switzerland","Syrian Arab Republic","Thailand","Timor-Leste","Togo","Tonga",
            "Trinidad and Tobago","Tunisia","Turkey","Uganda","United Arab Emirates","United Kingdom","Tanzania","United States of America","Uruguay","Vanuatu","Venezuela","Vietnam",
            "Yemen","Zambia","Zimbabwe"],
-           "labels":["Afghanistan","Albania","Algeria","Angola","Antigua and Barbuda","Argentina","Australia","Austria","Bahamas","Bahrain","Bangladesh","Barbados","Belize",
+           "labels":["None", "Afghanistan","Albania","Algeria","Angola","Antigua and Barbuda","Argentina","Australia","Austria","Bahamas","Bahrain","Bangladesh","Barbados","Belize",
            "Benin","Bhutan","Bolivia","Botswana","Brazil","Brunei Darussalam","Bulgaria","Burkina Faso","Burundi","Cabo Verde","Cambodia","Cameroon","Canada","Central African Republic",
            "Chad","Chile","Hong Kong","China","Colombia","Comoros","Republic of the Congo","Costa Rica","Cuba","Cyprus","Côte d'Ivoire","North Korea","Democratic Republic of the Congo",
            "Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eswatini","Faroe Islands","Fiji","Finland","France","French Polynesia",
