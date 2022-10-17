@@ -13,14 +13,15 @@
   "encoding": {
     "x": {
       "timeUnit": "year", "field": "Year",
-      "axis": {"domain": false, "format": "%Y"},
+      "axis": {"domain": false, "format": "%Y", "grid": false},
       "title":"Year"
     },
     "y": {
       "aggregate": "sum",
       "field": "Production",
       "axis":{
-        "format":".1s"
+        "format":".1s",
+        "grid": false
       },
       "title":"Crop Production (billion)"
     },
