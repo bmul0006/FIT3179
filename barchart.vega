@@ -3,8 +3,7 @@
   "title": "Top 5 Crops for each country in 2019",
   "height": 300,
   "autosize": {
-   "type": "fit",
-   "contains": "padding"},
+   "type": "pad"},
   "config": {"font": "Montserrat",
             "axisY": {"titleAngle": 0, "titleX": -17, "titleY": -3}},
   "data":{
@@ -76,7 +75,9 @@
         "field":"Amount",
         "type":"quantitative",
         "title":"Yield",
-        "axis":{"format":".1s"}
+        "axis":{
+         "format":".1s",
+         "grid": false}
      },
      "y":{
         "field":"Item",
@@ -86,7 +87,9 @@
            "op":"average",
            "order":"descending"
         },
-        "title":"Crop"
+        "title":"Crop",
+        "axis":{
+         "grid": false}
      }
   },
   "layer":[
