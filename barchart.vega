@@ -1,115 +1,125 @@
 {
-  "$schema":"https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Top 5 Crops for each country in 2019",
-  "height": 300,
-  "autosize": {
-   "type": "pad"},
-  "config": {"font": "Montserrat",
-            "axisY": {"titleAngle": 0, "titleX": -17, "titleY": -3}},
-  "data":{
-     "url":"https://raw.githubusercontent.com/bmul0006/FIT3179/main/crop_productions.csv"
-  },
-  "params":[
-     {
-        "name":"Country_selection",
-        "bind":{
-           "input":"select",
-           "options":[null,"Afghanistan","Albania","Algeria","Angola","Antigua and Barbuda","Argentina","Australia","Austria","Bahamas","Bahrain","Bangladesh","Barbados","Belize",
-           "Benin","Bhutan","Bolivia","Botswana","Brazil","Brunei Darussalam","Bulgaria","Burkina Faso","Burundi","Cabo Verde","Cambodia","Cameroon","Canada","Central African Republic",
-           "Chad","Chile","Hong Kong","China","Colombia","Comoros","Republic of the Congo","Costa Rica","Cuba","Cyprus","Côte d'Ivoire","North Korea","Democratic Republic of the Congo",
-           "Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eswatini","Faroe Islands","Fiji","Finland","France","French Polynesia",
-           "Gabon","Gambia","Germany","Ghana","Greece","Grenada","Guatemala","Guinea","Guinea-Bissau","Guyana","Haiti","Honduras","Hungary","Iceland","India","Indonesia","Iran","Iraq",
-           "Ireland","Israel","Italy","Jamaica","Japan","Jordan","Kenya","Kiribati","Kuwait","Laos","Lebanon","Lesotho","Liberia","Libya","Madagascar","Malawi","Malaysia","Maldives",
-           "Mali","Malta","Mauritania","Mauritius","Mexico","Mongolia","Morocco","Mozambique","Myanmar","Namibia","Nepal","Netherlands","New Caledonia","New Zealand","Nicaragua","Niger",
-           "Nigeria","Norway","Oman","Pakistan","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","South Korea","Romania","Rwanda",
-           "St. Kitts and Nevis","St. Lucia","St. Vincent and the Grenadines","Samoa","Sao Tome and Principe","Saudi Arabia","Senegal","Seychelles","Sierra Leone","Singapore",
-           "Solomon Islands","Somalia","South Africa","Spain","Sri Lanka","Suriname","Sweden","Switzerland","Syrian Arab Republic","Thailand","Timor-Leste","Togo","Tonga",
-           "Trinidad and Tobago","Tunisia","Turkey","Uganda","United Arab Emirates","United Kingdom","Tanzania","United States of America","Uruguay","Vanuatu","Venezuela","Vietnam",
-           "Yemen","Zambia","Zimbabwe"],
-           "labels":["None", "Afghanistan","Albania","Algeria","Angola","Antigua and Barbuda","Argentina","Australia","Austria","Bahamas","Bahrain","Bangladesh","Barbados","Belize",
-           "Benin","Bhutan","Bolivia","Botswana","Brazil","Brunei Darussalam","Bulgaria","Burkina Faso","Burundi","Cabo Verde","Cambodia","Cameroon","Canada","Central African Republic",
-           "Chad","Chile","Hong Kong","China","Colombia","Comoros","Republic of the Congo","Costa Rica","Cuba","Cyprus","Côte d'Ivoire","North Korea","Democratic Republic of the Congo",
-           "Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eswatini","Faroe Islands","Fiji","Finland","France","French Polynesia",
-           "Gabon","Gambia","Germany","Ghana","Greece","Grenada","Guatemala","Guinea","Guinea-Bissau","Guyana","Haiti","Honduras","Hungary","Iceland","India","Indonesia","Iran","Iraq",
-           "Ireland","Israel","Italy","Jamaica","Japan","Jordan","Kenya","Kiribati","Kuwait","Laos","Lebanon","Lesotho","Liberia","Libya","Madagascar","Malawi","Malaysia","Maldives",
-           "Mali","Malta","Mauritania","Mauritius","Mexico","Mongolia","Morocco","Mozambique","Myanmar","Namibia","Nepal","Netherlands","New Caledonia","New Zealand","Nicaragua","Niger",
-           "Nigeria","Norway","Oman","Pakistan","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","South Korea","Romania","Rwanda",
-           "St. Kitts and Nevis","St. Lucia","St. Vincent and the Grenadines","Samoa","Sao Tome and Principe","Saudi Arabia","Senegal","Seychelles","Sierra Leone","Singapore",
-           "Solomon Islands","Somalia","South Africa","Spain","Sri Lanka","Suriname","Sweden","Switzerland","Syrian Arab Republic","Thailand","Timor-Leste","Togo","Tonga",
-           "Trinidad and Tobago","Tunisia","Turkey","Uganda","United Arab Emirates","United Kingdom","Tanzania","United States of America","Uruguay","Vanuatu","Venezuela","Vietnam",
-           "Yemen","Zambia","Zimbabwe"],
-           "name":"Country: "
-        }
-     }
-  ],
-  "transform":[
-     {
-        "filter":"datum.Year == 2019"
-     },
-     {
-        "filter":"datum.Type == 'Yield'"
-     },
-     {
-      "filter":"datum.Country == Country_selection"
-     },
-     {
-        "window":[
-           {
-              "op":"rank",
-              "as":"rank"
-           }
-        ],
-        "sort":[
-           {
-              "field":"Amount",
-              "order":"descending"
-           }
-        ]
-     },
-     {
-        "filter":"datum.rank <= 5"
-     }
-  ],
-  "encoding":{
-     "x":{
-        "field":"Amount",
-        "type":"quantitative",
-        "title":"Yield",
-        "axis":{
-         "format":".1s",
-         "grid": false}
-     },
-     "y":{
-        "field":"Item",
-        "type":"nominal",
-        "sort":{
-           "field":"Amount",
-           "op":"average",
-           "order":"descending"
-        },
-        "title":"Crop",
-        "axis":{
-         "grid": false}
-     }
-  },
-  "layer":[
-     {
-        "mark":"bar"
-     },
-     {
-        "mark":{
-           "type":"text",
-           "align":"left",
-           "baseline":"middle",
-           "dx":3
-        },
-        "encoding":{
-           "text":{
-              "field":"Amount",
-              "type":"quantitative",
-              "format":","
-           }
-        }
-     }
-  ]
-}
+   "$schema":"https://vega.github.io/schema/vega-lite/v5.json",
+   "title": "Top 5 Crops for each country in 2019",
+   "height": {"step": 50},
+   "config": {"font": "Montserrat",
+             "axisY": {"titleAngle": 0, "titleX": -17, "titleY": -3}},
+   "data":{
+      "url":"https://raw.githubusercontent.com/bmul0006/FIT3179/main/crop_productions.csv"
+   },
+   "params":[
+      {
+         "name":"Country_selection",
+         "bind":{
+            "input":"select",
+            "options":[null,"Afghanistan","Albania","Algeria","Angola","Antigua and Barbuda","Argentina","Australia","Austria","Bahamas","Bahrain","Bangladesh","Barbados","Belize",
+            "Benin","Bhutan","Bolivia","Botswana","Brazil","Brunei Darussalam","Bulgaria","Burkina Faso","Burundi","Cabo Verde","Cambodia","Cameroon","Canada","Central African Republic",
+            "Chad","Chile","Hong Kong","China","Colombia","Comoros","Republic of the Congo","Costa Rica","Cuba","Cyprus","Côte d'Ivoire","North Korea","Democratic Republic of the Congo",
+            "Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eswatini","Faroe Islands","Fiji","Finland","France","French Polynesia",
+            "Gabon","Gambia","Germany","Ghana","Greece","Grenada","Guatemala","Guinea","Guinea-Bissau","Guyana","Haiti","Honduras","Hungary","Iceland","India","Indonesia","Iran","Iraq",
+            "Ireland","Israel","Italy","Jamaica","Japan","Jordan","Kenya","Kiribati","Kuwait","Laos","Lebanon","Lesotho","Liberia","Libya","Madagascar","Malawi","Malaysia","Maldives",
+            "Mali","Malta","Mauritania","Mauritius","Mexico","Mongolia","Morocco","Mozambique","Myanmar","Namibia","Nepal","Netherlands","New Caledonia","New Zealand","Nicaragua","Niger",
+            "Nigeria","Norway","Oman","Pakistan","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","South Korea","Romania","Rwanda",
+            "St. Kitts and Nevis","St. Lucia","St. Vincent and the Grenadines","Samoa","Sao Tome and Principe","Saudi Arabia","Senegal","Seychelles","Sierra Leone","Singapore",
+            "Solomon Islands","Somalia","South Africa","Spain","Sri Lanka","Suriname","Sweden","Switzerland","Syrian Arab Republic","Thailand","Timor-Leste","Togo","Tonga",
+            "Trinidad and Tobago","Tunisia","Turkey","Uganda","United Arab Emirates","United Kingdom","Tanzania","United States of America","Uruguay","Vanuatu","Venezuela","Vietnam",
+            "Yemen","Zambia","Zimbabwe"],
+            "labels":["None", "Afghanistan","Albania","Algeria","Angola","Antigua and Barbuda","Argentina","Australia","Austria","Bahamas","Bahrain","Bangladesh","Barbados","Belize",
+            "Benin","Bhutan","Bolivia","Botswana","Brazil","Brunei Darussalam","Bulgaria","Burkina Faso","Burundi","Cabo Verde","Cambodia","Cameroon","Canada","Central African Republic",
+            "Chad","Chile","Hong Kong","China","Colombia","Comoros","Republic of the Congo","Costa Rica","Cuba","Cyprus","Côte d'Ivoire","North Korea","Democratic Republic of the Congo",
+            "Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eswatini","Faroe Islands","Fiji","Finland","France","French Polynesia",
+            "Gabon","Gambia","Germany","Ghana","Greece","Grenada","Guatemala","Guinea","Guinea-Bissau","Guyana","Haiti","Honduras","Hungary","Iceland","India","Indonesia","Iran","Iraq",
+            "Ireland","Israel","Italy","Jamaica","Japan","Jordan","Kenya","Kiribati","Kuwait","Laos","Lebanon","Lesotho","Liberia","Libya","Madagascar","Malawi","Malaysia","Maldives",
+            "Mali","Malta","Mauritania","Mauritius","Mexico","Mongolia","Morocco","Mozambique","Myanmar","Namibia","Nepal","Netherlands","New Caledonia","New Zealand","Nicaragua","Niger",
+            "Nigeria","Norway","Oman","Pakistan","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","South Korea","Romania","Rwanda",
+            "St. Kitts and Nevis","St. Lucia","St. Vincent and the Grenadines","Samoa","Sao Tome and Principe","Saudi Arabia","Senegal","Seychelles","Sierra Leone","Singapore",
+            "Solomon Islands","Somalia","South Africa","Spain","Sri Lanka","Suriname","Sweden","Switzerland","Syrian Arab Republic","Thailand","Timor-Leste","Togo","Tonga",
+            "Trinidad and Tobago","Tunisia","Turkey","Uganda","United Arab Emirates","United Kingdom","Tanzania","United States of America","Uruguay","Vanuatu","Venezuela","Vietnam",
+            "Yemen","Zambia","Zimbabwe"],
+            "name":"Country: "
+         }
+      }
+   ],
+   "transform":[
+      {
+         "filter":"datum.Year == 2019"
+      },
+      {
+         "filter":"datum.Type == 'Yield'"
+      },
+      {
+       "filter":"datum.Country == Country_selection"
+      },
+      {
+         "window":[
+            {
+               "op":"rank",
+               "as":"rank"
+            }
+         ],
+         "sort":[
+            {
+               "field":"Amount",
+               "order":"descending"
+            }
+         ]
+      },
+      {
+         "filter":"datum.rank <= 5"
+      }
+   ],
+   "encoding":{
+      "x":{
+         "field":"Amount",
+         "type":"quantitative",
+         "title":"Yield",
+         "axis":{
+          "format":".1s",
+          "grid": false}
+      },
+      "y":{
+         "field":"Item",
+         "type":"nominal",
+         "sort":{
+            "field":"Amount",
+            "op":"average",
+            "order":"descending"
+         },
+         "title":"Crop",
+         "scale": {"padding": 0},
+       "axis": {
+         "bandPosition": 0,
+         "grid": true,
+         "domain": false,
+         "ticks": false,
+         "labelAlign": "left",
+         "labelBaseline": "middle",
+         "labelPadding": -5,
+         "labelOffset": -15,
+         "titleX": 5,
+         "titleY": -5,
+         "titleAngle": 0,
+         "titleAlign": "left"
+      }}
+   },
+   "layer":[
+      {
+         "mark":{"type": "bar", "yOffset": 5, "cornerRadiusEnd": 2, "height": {"band": 0.5}}
+      },
+      {
+         "mark":{
+            "type":"text",
+            "align":"left",
+            "baseline":"middle",
+            "dx":3
+         },
+         "encoding":{
+            "text":{
+               "field":"Amount",
+               "type":"quantitative",
+               "format":","
+            }
+         }
+      }
+   ]
+ }
