@@ -1,6 +1,7 @@
 {
    "$schema":"https://vega.github.io/schema/vega-lite/v5.json",
    "title": "Top 5 Crops for each country in 2019",
+   "width":"container",
    "height": {"step": 50},
    "config": {"font": "Montserrat",
              "axisY": {"titleAngle": 0, "titleX": -17, "titleY": -3}},
